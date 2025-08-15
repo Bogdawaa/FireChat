@@ -1,0 +1,108 @@
+---
+# .swiftlint.yml
+# FireChat Configuration
+# Updated: 15.08.2025
+
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+  - function_body_length
+  - file_length
+  - type_body_length
+  - identifier_length
+  - cyclomatic_complexity
+  - force_cast
+  - force_try
+
+opt_in_rules:
+  - empty_count
+  - closure_spacing
+  - vertical_whitespace
+  - multiline_parameters
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - unused_closure_parameter
+
+line_length:
+  warning: 120
+  error: 150
+  ignores_urls: true
+  ignores_function_declarations: true
+  ignores_comments: true
+
+file_length:
+  warning: 600
+  error: 800
+  ignore_comment_only_lines: true
+
+type_body_length:
+  warning: 400
+  error: 600
+  ignore_comment_only_lines: true
+
+function_body_length:
+  warning: 50
+  error: 100
+  ignore_comment_only_lines: true
+
+cyclomatic_complexity:
+  warning: 12
+  error: 20
+  ignores_case_statements: true
+
+identifier_length:
+  min_length:
+    warning: 3
+    error: 2
+  excluded:
+    - id
+    - to
+    - x
+    - y
+    - i
+    - k
+    - db
+
+excluded:
+  - Pods
+  - DerivedData
+  - Build
+  - Carthage
+  - fastlane
+  - "**/Generated"
+  - "**/Protobuf"
+  - "**/Firebase/__Pods__"
+  - "**/*.generated.swift"
+
+custom_rules:
+  firebase_service_naming:
+    name: "Firebase Service Naming Convention"
+    regex: '(let|var) [a-z]+Service: [A-Z][a-zA-Z]+Service'
+    message: "Services should follow naming convention: 'let firebaseService: FirebaseService'"
+    severity: warning
+    match_kinds: identifier
+
+  firebase_listener_weak_capture:
+    name: "Weak Capture in Firebase Listeners"
+    regex: '(addSnapshotListener|observe|observeSingleEvent)[^{]*\{[^}]*\bself\b'
+    message: "Firebase listeners must use [weak self] to prevent retain cycles"
+    severity: error
+    match_kinds: identifier
+
+  swiftui_preview_consistency:
+    name: "SwiftUI Preview Consistency"
+    included: ".*PreviewProvider\\.swift"
+    regex: '(struct \w+_Previews: PreviewProvider \{\n\s*static var previews: some View \{\n\s*\w+\(.*\)\n\s*\}\n\})'
+    message: "Preview providers should follow consistent structure"
+    severity: warning
+
+  firestore_model_decodable:
+    name: "Firestore Model Decodable"
+    regex: 'struct \w+: (Identifiable|Codable).*\{\n.*@DocumentID var id: String\?\n.*\}'
+    message: "Firestore models should conform to Codable and use @DocumentID"
+    severity: warning
+
+analyzer_rules:
+  - explicit_self
+
+reporter: "xcode"

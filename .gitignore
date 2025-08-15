@@ -1,0 +1,77 @@
+# Xcode
+.DS_Store
+*.swp
+*.backup
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcscmblueprint
+
+# CocoaPods
+Pods/
+!Podfile
+!Podfile.lock
+Podfile.lock
+
+# Firebase
+GoogleService-Info.plist
+
+# Build
+build/
+*.o
+*.a
+
+# Swift Package Manager
+.swiftpm
+.build/
+Packages/
+*.xcodeproj
+
+# AppCode
+.idea/
+.swiftlint.yml
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# OS X
+*.DS_Store
+
+# Local development files
+.env
+.env.local
+.env.*.local
+
+# Carthage
+Carthage/
+
+# SwiftLint
+.swiftlint.yml
+
+# Vim
+*.swp
+*.swo
+
+# Backup files
+*.backup
+*.bak
+
+# Misc
+*.log
+*.xcarchive
+*.xcodeproj/project.xcworkspace/xcuserdata/

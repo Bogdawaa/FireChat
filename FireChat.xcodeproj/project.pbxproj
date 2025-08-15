@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F0CE7CC62E4F4CC40072689B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F0CE7CC52E4F4CC40072689B /* FirebaseAuth */; };
+		F0CE7CC82E4F4CC40072689B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F0CE7CC72E4F4CC40072689B /* FirebaseFirestore */; };
+		F0CE7CCA2E4F4CC40072689B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F0CE7CC92E4F4CC40072689B /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F0CE7CA82E4F4A500072689B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CE7CC62E4F4CC40072689B /* FirebaseAuth in Frameworks */,
+				F0CE7CC82E4F4CC40072689B /* FirebaseFirestore in Frameworks */,
+				F0CE7CCA2E4F4CC40072689B /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +115,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				F0CE7CCF2E4F50EB0072689B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F0CE7C9C2E4F4A4F0072689B /* FireChat */,
 			);
 			name = FireChat;
 			packageProductDependencies = (
+				F0CE7CC52E4F4CC40072689B /* FirebaseAuth */,
+				F0CE7CC72E4F4CC40072689B /* FirebaseFirestore */,
+				F0CE7CC92E4F4CC40072689B /* FirebaseStorage */,
 			);
 			productName = FireChat;
 			productReference = F0CE7C9A2E4F4A4F0072689B /* FireChat.app */;
@@ -195,6 +208,10 @@
 			);
 			mainGroup = F0CE7C912E4F4A4F0072689B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F0CE7CC42E4F4CC40072689B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F0CE7CCD2E4F50C90072689B /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F0CE7C9B2E4F4A4F0072689B /* Products */;
 			projectDirPath = "";
@@ -265,6 +282,10 @@
 			isa = PBXTargetDependency;
 			target = F0CE7C992E4F4A4F0072689B /* FireChat */;
 			targetProxy = F0CE7CB22E4F4A500072689B /* PBXContainerItemProxy */;
+		};
+		F0CE7CCF2E4F50EB0072689B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = F0CE7CCE2E4F50EB0072689B /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,11 +421,12 @@
 				DEVELOPMENT_TEAM = 3SG3MUV83U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,9 +434,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.bogdanFartdinov.FireChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,11 +453,12 @@
 				DEVELOPMENT_TEAM = 3SG3MUV83U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,9 +466,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.bogdanFartdinov.FireChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -558,6 +587,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F0CE7CC42E4F4CC40072689B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+		F0CE7CCD2E4F50C90072689B /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.59.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F0CE7CC52E4F4CC40072689B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0CE7CC42E4F4CC40072689B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F0CE7CC72E4F4CC40072689B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0CE7CC42E4F4CC40072689B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F0CE7CC92E4F4CC40072689B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0CE7CC42E4F4CC40072689B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		F0CE7CCE2E4F50EB0072689B /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0CE7CCD2E4F50C90072689B /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F0CE7C922E4F4A4F0072689B /* Project object */;
 }
